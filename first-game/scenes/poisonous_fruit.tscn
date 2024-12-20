@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c54goypsxrky4"]
+
+[ext_resource type="Texture2D" uid="uid://drbwffqqej37p" path="res://assets/sprites/fruit.png" id="1_cv85b"]
+[ext_resource type="PackedScene" uid="uid://cembx2dmaien4" path="res://scenes/killzone.tscn" id="2_k84c4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i62ew"]
+atlas = ExtResource("1_cv85b")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7sbsy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i62ew")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2pvob"]
+radius = 4.0
+
+[node name="poisonous fruit" type="Area2D"]
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_7sbsy")
+
+[node name="killzone" parent="." instance=ExtResource("2_k84c4")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_2pvob")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="killzone/CollisionShape2D" method="_on_poisonous_fruit_body_entered"]
