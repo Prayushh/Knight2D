@@ -176,8 +176,8 @@ sources/0 = SubResource("TileSetAtlasSource_uujpu")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eqlne"]
 
 [sub_resource type="Animation" id="Animation_e80df"]
-length = 0.001
-loop_mode = 1
+length = 1.4
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -185,22 +185,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.233333),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.0333333, 1.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(749, -23)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../platform2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.000485815),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(833, -52)]
+"values": [Vector2(776, -23), Vector2(694, -23)]
 }
 
 [sub_resource type="Animation" id="Animation_bn55f"]
@@ -443,13 +431,13 @@ position = Vector2(426, -181)
 [node name="platforms" type="Node" parent="."]
 
 [node name="platform" parent="platforms" instance=ExtResource("3_kyjsx")]
-position = Vector2(749, -23)
+position = Vector2(776, -23)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="platforms/platform"]
 libraries = {
 "": SubResource("AnimationLibrary_1w348")
 }
-autoplay = "moveplatform"
+autoplay = "RESET"
 
 [node name="platform2" parent="platforms" instance=ExtResource("3_kyjsx")]
 position = Vector2(817, -52)
@@ -603,6 +591,15 @@ theme_override_colors/font_color = Color(0.298039, 0.321569, 0.368627, 1)
 theme_override_fonts/font = ExtResource("7_3hpxy")
 theme_override_font_sizes/font_size = 8
 text = "Be careful !"
+
+[node name="w" type="Label" parent="label"]
+offset_left = -129.0
+offset_top = 56.0
+offset_right = 117.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("7_3hpxy")
+theme_override_font_sizes/font_size = 8
+text = "Congratulations on going the wrong way"
 
 [node name="fruits" type="Node" parent="."]
 
