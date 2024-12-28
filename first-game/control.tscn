@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://i1tb8fohkmq4"]
+
+[ext_resource type="FontFile" uid="uid://rjlr4mwrfrow" path="res://assets/fonts/PixelOperator8.ttf" id="1_siaf2"]
+[ext_resource type="Texture2D" uid="uid://ox8w3r7fbcwl" path="res://assets/fonts/background.jpg" id="1_xxko8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_of8l7"]
+texture = ExtResource("1_xxko8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pc8m"]
+bg_color = Color(0.197937, 0.197937, 0.197937, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.994025, 0.968477)
+theme_override_styles/panel = SubResource("StyleBoxTexture_of8l7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.345486
+anchor_top = 0.430556
+anchor_right = 0.627795
+anchor_bottom = 0.701651
+offset_right = -113.22
+offset_bottom = 39.33
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.53406, 0.81707)
+theme_override_constants/separation = 25
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("1_siaf2")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_8pc8m")
+text = "
+PLAY
+
+"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("1_siaf2")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_8pc8m")
+text = "
+EXIT
+
+"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("1_siaf2")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_8pc8m")
+text = "
+OPTIONS
+
+"

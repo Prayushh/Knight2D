@@ -570,18 +570,6 @@ theme_override_fonts/font = ExtResource("7_3hpxy")
 theme_override_font_sizes/font_size = 8
 text = "Save the princess, she's above...."
 
-[node name="Label8" type="Label" parent="label"]
-offset_left = 1996.0
-offset_top = -620.0
-offset_right = 2445.0
-offset_bottom = -595.0
-theme_override_colors/font_color = Color(0.298039, 0.321569, 0.368627, 1)
-theme_override_fonts/font = ExtResource("7_3hpxy")
-theme_override_font_sizes/font_size = 8
-text = "Congratulations!
- You saved her
-"
-
 [node name="Label2" type="Label" parent="label"]
 offset_left = 694.0
 offset_top = -148.0
@@ -591,15 +579,6 @@ theme_override_colors/font_color = Color(0.298039, 0.321569, 0.368627, 1)
 theme_override_fonts/font = ExtResource("7_3hpxy")
 theme_override_font_sizes/font_size = 8
 text = "Be careful !"
-
-[node name="w" type="Label" parent="label"]
-offset_left = -129.0
-offset_top = 56.0
-offset_right = 117.0
-offset_bottom = 79.0
-theme_override_fonts/font = ExtResource("7_3hpxy")
-theme_override_font_sizes/font_size = 8
-text = "Congratulations on going the wrong way"
 
 [node name="fruits" type="Node" parent="."]
 
